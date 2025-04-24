@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker ₹</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Expense Tracker (INR)</h1>
+
+    <div class="section" id="budget-section">
+      <h2>Enter Your Total Budget</h2>
+      <input type="number" id="total-budget" placeholder="₹ e.g. 10000"/>
+      <button onclick="setBudget()">Set Budget</button>
+    </div>
+
+    <div class="section hidden" id="tracker-section">
+      <div class="summary">
+        <div>
+          <h3>Total Budget</h3>
+          <p id="budget-amount">₹0</p>
+        </div>
+        <div>
+          <h3>Total Spent</h3>
+          <p id="spent-amount">₹0</p>
+        </div>
+        <div>
+          <h3>Remaining</h3>
+          <p id="remaining-amount">₹0</p>
+        </div>
+      </div>
+
+      <h2>Add Expense</h2>
+      <div class="form">
+        <input type="text" id="expense-name" placeholder="Expense Description" />
+        <input type="number" id="expense-amount" placeholder="₹ Amount" />
+        <button onclick="addExpense()">Add</button>
+      </div>
+
+      <h2>Expense History</h2>
+      <ul id="expense-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
